@@ -1,4 +1,4 @@
-<!--https://www.figma.com/design/lxYFrD9WJLbD7kfpcpwgsl/noit?node-id=423-2711&t=gBBQhP4NngwWsICv-4-->
+<!--&lt;!&ndash;https://www.figma.com/design/lxYFrD9WJLbD7kfpcpwgsl/noit?node-id=423-2711&t=gBBQhP4NngwWsICv-4&ndash;&gt;-->
 
 <script lang="ts">
     import video from '$lib/assets/video.svg';
@@ -25,12 +25,12 @@
             </div>
         {/each}
     </div>
-    <a href="/home/animations" class="font-transforma text-2xl relative right-[-60vw] mt-4">Виж още ></a>
+    <a href="/home/animations" class="font-transforma text-2xl relative right-[-60vw] mt-4 w-fit">Виж още ></a>
 </div>
 
 <div class="flex w-screen h-2 bg-(--main)"></div>
 
-<div class="flex w-screen h-1/2 flex-col">
+<div class="flex w-screen flex-col">
     <div class="w-1/2 h-fit font-transforma text-2xl m-4 flex justify-evenly items-center">
         <div class="bg-(--accent) flex justify-center items-center border-4 rounded-full border-(--accent) w-12 h-12">
             <img class="w-8 h-8 " src="{game}" alt="video">
@@ -46,5 +46,5 @@
             </div>
         {/each}
     </div>
-    <a href="/home/games" class="font-transforma text-2xl relative right-[-60vw] mt-4">Виж още ></a>
+    <a href="/home/games" class="font-transforma text-2xl relative right-[-60vw] mt-4 w-fit">Виж още ></a>
 </div>

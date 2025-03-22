@@ -1,9 +1,5 @@
-import type {RecordModel} from "pocketbase";
-
 export const load = async ({ locals }) => {
-    const record = await locals.pb.collection('badges').getFullList();
-    const url = locals.pb.files.getURL(record, locals.pb.authStore.record!.badge);
-    console.log(record);
+    console.log(await locals.pb.collection('badges').getList());
 }
 
 export const actions = {

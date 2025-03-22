@@ -1,4 +1,5 @@
 import type {RecordModel} from "pocketbase";
+import {redirect} from "@sveltejs/kit";
 
 export const load = async ({locals}) => {
 	const animations = await locals.pb.collection('animations').getFullList();
@@ -34,5 +35,25 @@ export const actions = {
 	},
 	removename: async ({locals}) => {
 		await locals.pb.collection('users').update(locals.pb.authStore.record!.id, {name: ''});
+	},
+	search: async ({locals, request}) => {
+		const data = await request.formData();
+		const search = data.get('search') as string;
+		const animations = await locals.pb.collection('animations').getFullList();
+		const games = await locals.pb.collection('games').getFullList();
+		const animationsFiltered = animations.filter(({name} : { name: string} ) => name.toLowerCase().includes(search.toLowerCase()));
+		const gamesFiltered = games.filter(({name} : { name: string}) => name.toLowerCase().includes(search.toLowerCase()));
+
+		if(search.length < 3 ) throw redirect(303, '/home');
+
+		if(animationsFiltered.length > 0){
+			throw redirect(303, '/home/animations/' + animationsFiltered[0].thumbnail[0]);
+		}
+		else if(gamesFiltered.length > 0){
+			throw redirect(303, '/home/games/' + gamesFiltered[0].thumbnail[0]);
+		}
+		else{
+			throw redirect(303, '/home');
+		}
 	}
 }

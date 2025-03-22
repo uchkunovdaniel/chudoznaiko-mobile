@@ -13,7 +13,7 @@
 <div class="w-screen h-20 bg-(--main) m-0 fixed bottom-0 flex justify-evenly z-50">
     <button onclick="{() => window.location.href='/home'}"><img src="{home}" alt="home"></button>
     <button onclick="{() => window.location.href = '/home/profile'}"><img src="{profile}" alt="profiile"></button>
-    <button><img class="img" src="{search}" alt="search"></button>
+    <button onclick="{() => window.location.href = '/home/search'}"><img class="img" src="{search}" alt="search"></button>
     <button onclick="{() => window.location.href = '/home/games'}"><img class="img" src="{game}" alt="game"></button>
     <button onclick="{() => window.location.href = '/home/animations'}"><img class="img" src="{video}" alt="video"></button>
 </div>

@@ -20,12 +20,12 @@
         {#each data.animations.slice(0,2) as animation, i}
             <div>
                 <button onclick={() => {window.location.href = `/home/animations/${animation.video[0]}`}} aria-label={animation.video[0]}>
-                    <img class="w-48 h-30 cursor-pointer rounded-md" src={data.thumbnailsa[i]} alt="animation">
+                    <img class="w-[45vw] h-[30vw] cursor-pointer rounded-md" src={data.thumbnailsa[i]} alt="animation">
                 </button>
             </div>
         {/each}
     </div>
-    <a href="/home/animations" class="font-transforma text-2xl relative right-[-60vw] mt-4 w-fit">Виж още ></a>
+    <a href="/home/animations" class="font-transforma text-[6vw] relative right-[-60vw] mt-4 w-fit">Виж още ></a>
 </div>
 
 <div class="flex w-screen h-2 bg-(--main)"></div>
@@ -41,10 +41,10 @@
         {#each data.animations.slice(0,2) as animation, i}
             <div>
                 <button onclick={() => {window.location.href = `/home/animations/${animation.video[0]}`}} aria-label={animation.video[0]}>
-                    <img class="w-48 h-30 cursor-pointer rounded-md" src={data.thumbnailsa[i]} alt="animation">
+                    <img class="w-[45vw] h-[30vw] cursor-pointer rounded-md" src={data.thumbnailsa[i]} alt="animation">
                 </button>
             </div>
         {/each}
     </div>
-    <a href="/home/games" class="font-transforma text-2xl relative right-[-60vw] mt-4 w-fit">Виж още ></a>
+    <a href="/home/games" class="font-transforma text-[6vw] relative right-[-60vw] mt-4 w-fit">Виж още ></a>
 </div>

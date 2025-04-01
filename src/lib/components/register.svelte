@@ -16,9 +16,9 @@
         </button>
         <h1 class="text-white font-transforma text-2xl top-2 fixed">Регистрирай се</h1>
         <form action="?/register" method="POST" use:enhance class="flex flex-col justify-center items-center gap-4">
-            <input type="text" placeholder="Потребителско име" class="w-60 h-10 rounded-md bg-white p-4">
-            <input type="password" placeholder="Парола" class="w-60 h-10 rounded-md bg-white p-4">
-            <input type="password" placeholder="Потвърди Парола" class="w-60 h-10 rounded-md bg-white p-4">
+            <input type="text" placeholder="Потребителско име" class="w-60 h-10 rounded-md bg-white p-4" required autocomplete="email">
+            <input type="password" placeholder="Парола" class="w-60 h-10 rounded-md bg-white p-4" required autocomplete="new-password">
+            <input type="password" placeholder="Потвърди Парола" class="w-60 h-10 rounded-md bg-white p-4" required autocomplete="new-password">
             <button type="submit" class="bg-white w-40 h-10 rounded-md font-transforma btn-shadow">Регистрация</button>
         </form>
         <button onclick="{() => {login = true}}" class="font-transforma-light font-medium fixed bottom-4 right-4 text-white text-xl"><b>Влез</b></button>
